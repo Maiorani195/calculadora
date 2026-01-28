@@ -1,4 +1,5 @@
-import meu_modulo_calculadora.py
+import meu_modulo_calculadora
+
 def main(): 
     a = 10
     b = 5
@@ -6,22 +7,24 @@ def main():
     print("Subtração:", meu_modulo_calculadora.subtrair(a, b))
     print("Multiplicação:", meu_modulo_calculadora.multiplicar(a, b))
     print("Divisão:", meu_modulo_calculadora.dividir(a, b))
-    #meu_modulo_calculadora.py
-# def calcular(num1, num2, operacao):
-   # match operacao:
-        #case "+":
-          #  return num1 + num2
-       # case "-":
-       #     return num1 - num2
-       # case "*":
-      #      return num1 * num2
-      #  case "/":
-       #     return num1 / num2
 
-   # case "*":
-    #  res = num1 * num2
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: ")) 
+    operacao = input("Digite a operação (+, -, *, /): ")
 
-    #  case "/":
-      #res = num1 / num2
+    match operacao:
+        case "+":
+            res = num1 + num2
+        case "-":
+            res = num1 - num2
+        case "*":
+            res = num1 * num2
+        case "/":
+            res = num1 / num2
+        case _:
+            res = "Operação inválida"
 
-   # print(f"Resultado é igual  a {res}")
+    print(f"Resultado é igual a {res}")
+
+if __name__ == "__main__":
+    main()
